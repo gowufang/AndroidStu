@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Log;
 
 import com.project.ics.day0821rememberpassword.ActivityCollector;
 import com.project.ics.day0821rememberpassword.LoginActivity;
@@ -18,6 +19,7 @@ import static android.view.WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
 public class ForceOfflineReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
+        Log.d("foreoffline","OnReceive");
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
         dialogBuilder.setTitle("Warning");
         dialogBuilder.setMessage("You are forced to be offline. Please try to login again.");
@@ -38,6 +40,8 @@ public class ForceOfflineReceiver extends BroadcastReceiver {
 // 需要设置AlertDialog的类型，保证在广播接收器中可以正常弹出
         alertDialog.getWindow().setType(TYPE_SYSTEM_ALERT);
         alertDialog.show();
+
+
     }
 
 }
