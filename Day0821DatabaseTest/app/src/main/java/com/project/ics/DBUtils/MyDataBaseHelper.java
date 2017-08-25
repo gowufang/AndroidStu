@@ -3,7 +3,6 @@ package com.project.ics.DBUtils;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
 
 /**
  * Created by Administrator on 2017/8/21.
@@ -35,7 +34,7 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {//use to create or updat
 
         db.execSQL(CREATE_BOOK);//create the table
         db.execSQL(CREATE_CATEGORY);
-        Toast.makeText(mContext,"Created",Toast.LENGTH_SHORT).show();
+//        Toast.makeText(mContext,"Created",Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.project.ics.day0821databasetest">
+    package="com.project.ics.day0823providertest">
 
     <application
         android:allowBackup="true"
@@ -15,13 +15,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <provider
-            android:exported="true"
-            android:authorities="com.project.ics.day0821databasetest.provider"
-            android:name="com.project.ics.myprovider.DatabaseProvider">
-
-
-        </provider>
     </application>
 
 </manifest>
