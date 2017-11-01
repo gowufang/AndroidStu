@@ -31,7 +31,14 @@ public class ItemAdapter extends ArrayAdapter<Item> {
 
         Item item=getItem(position);
         Log.d("Getview","getview excuted!"+position);
-        View view= LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
+//        View view= LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
+        View view;
+        if (convertView==null){
+            view=LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
+
+        }else {
+            view=convertView;
+        }
         TextView name=(TextView) view.findViewById(R.id.name);
         TextView age= (TextView) view.findViewById(R.id.age);
         TextView phone= (TextView) view.findViewById(R.id.phone);
